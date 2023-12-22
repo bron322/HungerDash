@@ -23,7 +23,7 @@ export default function RestaurantScreen() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (item && item.id) {
+    if (item && item._id) {
       dispatch(setRestaurant({ ...item }));
     }
   }, []);

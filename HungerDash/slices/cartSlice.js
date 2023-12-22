@@ -12,15 +12,18 @@ export const cartSlice = createSlice({
       state.items = [...state.items, action.payload]
     },
     removeFromCart: (state, action) => {
+      console.log("Current Cart Items:", state.items);
+      console.log("Item to Remove:", action.payload_id);
       let newCart = [...state.items];
-      let itemIndex = state.items.findIndex(item=> item._id==action.payload.id);
-      if(itemIndex>=0){
+      let itemIndex = state.items.findIndex(item => item._id === action.payload._id);
+      console.log("Item Index:", itemIndex);
+      if (itemIndex >= 0) {
         newCart.splice(itemIndex, 1);
-      }else{
-        console.log("can't remove item as it is not in the cart");
+      } else {
+        console.log("Can't remove item as it is not in the cart");
       }
-      state.items = newCart
-    },
+      state.items = newCart;
+    },       
     emptyCart: (state, action)=>{
         state.items = [];
     }
