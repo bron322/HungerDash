@@ -14,6 +14,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, selectCartItems, selectCartTotal } from '../slices/cartSlice';
 import { selectRestaurant } from "../slices/restaurantSlice";
+import { urlFor } from '../sanity';
 
 export default function CartScreen() {
   const restaurant = useSelector(selectRestaurant);
@@ -89,7 +90,7 @@ export default function CartScreen() {
               </Text>
               <Image
                 className="h-14 w-14 rounded-full"
-                source={dish.image}
+                source={{uri: urlFor(dish.image).url()}}
               />
               <Text className="flex-1 font-bold text-gray-700">
                 {dish.name}
