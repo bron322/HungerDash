@@ -17,6 +17,12 @@ HungerDash is a mobile food delivery application built with React Native and Exp
 -Diverse Menu: Explore a wide range of dishes from different cuisines. <br>
 -Order Tracking: Track the status of your order in real-time. <br>
 
+## Tech Stack Used
+
+![React Native](https://reactnative.dev/)
+![Expo](https://expo.dev/)
+![Sanity](https://sanity.io/)
+
 ## Getting Started
 
 Scan the QR code on my cover poster with your iOS/Android device
