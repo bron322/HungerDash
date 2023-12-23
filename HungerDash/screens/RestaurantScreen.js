@@ -77,7 +77,7 @@ export default function RestaurantScreen() {
         </View>
 
         {/* menu */}
-        <View className="pb-36 bg-white">
+        <View className="pb-96 bg-white">
           <Text className="px-4 py-4 text-2xl font-bold">Menu</Text>
           {/* dishes */}
           {item.dishes.map((dish, index) => (

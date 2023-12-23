@@ -12,7 +12,7 @@ import * as Icon from "react-native-feather";
 import { themeColors } from "../theme";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from 'react-redux';
-import { removeFromCart, selectCartItems, selectCartTotal } from '../slices/cartSlice';
+import { removeFromCart, selectCartItems, selectCartItemsById, selectCartTotal } from '../slices/cartSlice';
 import { selectRestaurant } from "../slices/restaurantSlice";
 import { urlFor } from '../sanity';
 
@@ -28,7 +28,7 @@ export default function CartScreen() {
   useEffect(()=>{
     const items = cartItems.reduce((group,item)=>{
         if(group[item._id]){
-            group[item._id].push[item];
+            group[item._id].push(item);
         }else{
             group[item._id] = [item];
         }

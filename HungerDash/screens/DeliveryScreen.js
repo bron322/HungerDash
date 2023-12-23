@@ -29,8 +29,8 @@ export default function DeliveryScreen() {
     <View className="flex-1">
       <MapView
         initialRegion={{
-          latitude: restaurant.lat,
-          longitude: restaurant.lng,
+          latitude: "1.35280",
+          longitude: "103.68110",
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
         }}
@@ -39,8 +39,8 @@ export default function DeliveryScreen() {
       >
         <Marker
           coordinate={{
-            latitude: restaurant.lat,
-            longitude: restaurant.lng,
+            latitude: "1.35280",
+            longitude: "103.68110",
           }}
           title={restaurant.name}
           description={restaurant.description}

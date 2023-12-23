@@ -8,14 +8,14 @@ import { urlFor } from '../sanity'
 
 export default function DishRow({ item }) {
     const dispatch = useDispatch();
-    const totalItems = useSelector(state=> selectCartItemsById(state, item._id));
+    const totalItems = useSelector(state=> selectCartItemsById(state, item.name));
 
     const handleIncrease = ()=>{
         dispatch(addToCart({...item}))
     }
 
     const handleDecrease = ()=>{
-        dispatch(removeFromCart({id: item._id}))
+        dispatch(removeFromCart({ name : item.name}))
     }
 
   return (
@@ -36,10 +36,10 @@ export default function DishRow({ item }) {
         <View className="flex-row justify-between pl-3 items-center">
             <Text className="text-gray-700 text-lg font-bold">${item.price}</Text>
             <View className="flex-row items-center">
-                <TouchableOpacity className="p-1 rounded-full" style={{backgroundColor: themeColors.bgColor(1)}}>
+                {/* <TouchableOpacity className="p-1 rounded-full" style={{backgroundColor: themeColors.bgColor(1)}}> */}
                     {/* minus button */}
-                    <Icon.Minus onPress={handleDecrease} disabled={!totalItems.length} strokeWidth={2} height={20} width={20} stroke="white" />
-                </TouchableOpacity>
+                    {/* <Icon.Minus onPress={handleDecrease} disabled={!totalItems.length} strokeWidth={2} height={20} width={20} stroke="white" /> */}
+                {/* </TouchableOpacity> */}
                 
                 {/* Show Total Items */}
                 <Text className="px-3"> {totalItems.length} </Text>
