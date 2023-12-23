@@ -19,9 +19,9 @@ HungerDash is a mobile food delivery application built with React Native and Exp
 
 ## Tech Stack Used
 
-![React Native](https://reactnative.dev/)
-![Expo](https://expo.dev/)
-![Sanity](https://sanity.io/)
+* [React Native](https://reactnative.dev/) <br>
+* [Expo](https://expo.dev/) <br>
+* [Sanity](https://sanity.io/) <br>
 
 ## Getting Started
 
